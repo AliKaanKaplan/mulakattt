@@ -1,23 +1,19 @@
-# QA Lead Mülakat Hazırlık — Çalışma Dosyaları (Ruby)
+# QA Lead Mülakat Hazırlık — Çalışma Dosyaları
 
-Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framework / konu rehberi bulunmaktadır. **Tüm örnekler Ruby ile yazılmıştır.**
+Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framework rehberi bulunmaktadır.
 
 ## Dosyalar
 
 | Dosya | İçerik | Ekosistem |
 |---|---|---|
-| [`capybara.md`](./capybara.md) | Web UI / acceptance test DSL'i | Ruby (`capybara`, `rspec`, `selenium-webdriver`, `cuprite`) |
-| [`appium.md`](./appium.md) | Mobile (iOS / Android) UI otomasyonu | Ruby (`appium_lib_core`, `rspec`, `allure-rspec`, `parallel_tests`) |
-| [`gatling.md`](./gatling.md) | Load / performance testing (Ruby ile) | Ruby (`ruby-jmeter`, `Typhoeus`, `concurrent-ruby`) |
+| [`capybara.md`](./capybara.md) | Web UI / acceptance test DSL'i | **Ruby** (`capybara`, `rspec`, `selenium-webdriver`, `cuprite`) |
+| [`appium.md`](./appium.md) | Mobile (iOS / Android) UI otomasyonu | **Ruby** (`appium_lib_core`, `rspec`, `allure-rspec`, `parallel_tests`) |
+| [`gatling.md`](./gatling.md) | Load / performance testing | **Java DSL** (Maven, JVM) |
 
-## ⚠️ Gatling hakkında önemli not
+## ℹ️ Diller hakkında not
 
-**Gatling'in resmi Ruby DSL'i yoktur** — sadece Scala, Java ve Kotlin ile yazılır. `gatling.md` dosyası bu nedenle iki rolü birden üstlenir:
-
-1. **Load testing konseptlerini** öğretir (Gatling, JMeter, k6'da aynıdır: percentile, workload model, SLA, vb.)
-2. **Ruby ekosisteminde** load testing nasıl yapılır — `ruby-jmeter`, `Typhoeus`, `concurrent-ruby` pratik örnekleriyle
-
-Mülakatta "Gatling biliyor musun?" gelirse cevap: *"Konseptlerini biliyorum; Ruby ekosisteminde ruby-jmeter + Typhoeus kullanıyoruz çünkü Gatling Scala/Java/Kotlin DSL'i istiyor."*
+- **Capybara** ve **Appium** Ruby ile yazıldı çünkü Ruby ekosisteminde resmi/native client'ları var.
+- **Gatling Java DSL** ile yazıldı çünkü **Gatling'in resmi Ruby DSL'i yoktur** — sadece Scala, Java ve Kotlin desteklenir. Java DSL, Scala bilmek gerektirmediği için en pratik seçimdir.
 
 ## Her dosya şu yapıyı izler
 
