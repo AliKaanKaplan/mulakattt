@@ -1,20 +1,29 @@
-# QA Lead Mülakat Hazırlık — Çalışma Dosyaları
+# QA Lead Mülakat Hazırlık — Çalışma Dosyaları (Ruby)
 
-Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framework rehberi bulunmaktadır.
+Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framework / konu rehberi bulunmaktadır. **Tüm örnekler Ruby ile yazılmıştır.**
 
 ## Dosyalar
 
-| Dosya | İçerik | Süre tahmini |
+| Dosya | İçerik | Ekosistem |
 |---|---|---|
-| [`capybara.md`](./capybara.md) | Ruby web UI / acceptance test DSL'i | ~4 hafta |
-| [`appium.md`](./appium.md) | Mobile (iOS / Android) UI otomasyonu | ~4 hafta |
-| [`gatling.md`](./gatling.md) | Yük / performans test framework'ü | ~4 hafta |
+| [`capybara.md`](./capybara.md) | Web UI / acceptance test DSL'i | Ruby (`capybara`, `rspec`, `selenium-webdriver`, `cuprite`) |
+| [`appium.md`](./appium.md) | Mobile (iOS / Android) UI otomasyonu | Ruby (`appium_lib_core`, `rspec`, `allure-rspec`, `parallel_tests`) |
+| [`gatling.md`](./gatling.md) | Load / performance testing (Ruby ile) | Ruby (`ruby-jmeter`, `Typhoeus`, `concurrent-ruby`) |
+
+## ⚠️ Gatling hakkında önemli not
+
+**Gatling'in resmi Ruby DSL'i yoktur** — sadece Scala, Java ve Kotlin ile yazılır. `gatling.md` dosyası bu nedenle iki rolü birden üstlenir:
+
+1. **Load testing konseptlerini** öğretir (Gatling, JMeter, k6'da aynıdır: percentile, workload model, SLA, vb.)
+2. **Ruby ekosisteminde** load testing nasıl yapılır — `ruby-jmeter`, `Typhoeus`, `concurrent-ruby` pratik örnekleriyle
+
+Mülakatta "Gatling biliyor musun?" gelirse cevap: *"Konseptlerini biliyorum; Ruby ekosisteminde ruby-jmeter + Typhoeus kullanıyoruz çünkü Gatling Scala/Java/Kotlin DSL'i istiyor."*
 
 ## Her dosya şu yapıyı izler
 
 1. **Framework nedir?** — temel tanım
 2. **Mimari** — nasıl çalışır
-3. **Kurulum** — başlangıç adımları
+3. **Kurulum (Ruby ile)**
 4. **Temel kavramlar ve DSL**
 5. **İleri özellikler** (driver'lar, locator'lar, async, vb.)
 6. **Best practice'ler** — endüstri standartları
@@ -29,7 +38,7 @@ Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framewor
 
 1. **Capybara** — eğer iş Ruby/Rails projesindeyse öncelik
 2. **Appium** — mobile testing odaklı pozisyonlar için
-3. **Gatling** — performance/load testing sorumluluğu varsa
+3. **Gatling (Ruby load testing)** — performance/load testing sorumluluğu varsa
 
 QA Lead mülakatlarının çoğu **bir framework derinliği + iki framework genel kültür** ister. Önce hedef pozisyonun ana framework'ünü ezbere, diğerlerini "ne işe yarar, ne zaman seçilir" düzeyinde öğren.
 
