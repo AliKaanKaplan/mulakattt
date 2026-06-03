@@ -8,7 +8,15 @@ Bu klasörde QA Lead pozisyonu mülakatına hazırlık için üç ayrı framewor
 |---|---|---|
 | [`capybara.md`](./capybara.md) | Web UI / acceptance test DSL'i | **Ruby** (`capybara`, `rspec`, `selenium-webdriver`, `cuprite`) |
 | [`appium.md`](./appium.md) | Mobile (iOS / Android) UI otomasyonu | **Ruby** (`appium_lib_core`, `rspec`, `allure-rspec`, `parallel_tests`) |
+| [`cucumber.md`](./cucumber.md) | BDD framework + Capybara/Appium entegrasyonu | **Ruby** (`cucumber`, `capybara/cucumber`, `appium_lib_core`) |
 | [`gatling.md`](./gatling.md) | Load / performance testing | **Java DSL** (Maven, JVM) |
+
+## Tipik kullanım kombinasyonları
+
+- **Web acceptance test:** `cucumber` + `capybara` (Gherkin senaryo → Ruby step → Capybara DSL)
+- **Mobile acceptance test:** `cucumber` + `appium_lib_core` (Gherkin senaryo → Ruby step → Appium driver)
+- **Web regression (developer odaklı):** sadece `capybara` + `rspec`
+- **Performance test:** `gatling` (Java DSL, ayrı runner)
 
 ## ℹ️ Diller hakkında not
 
